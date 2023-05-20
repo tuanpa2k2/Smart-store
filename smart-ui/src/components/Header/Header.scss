@@ -1,1 +1,140 @@
-@import "../../css-config/mixins.scss";
+@import '../../css-config/mixins.scss';
+
+.main-header {
+    width: 100%;
+    padding: 0 20px;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 99;
+
+    @include md {
+        // Giao diện mobile khi thu phóng
+        padding: 0 40px;
+    }
+
+    .header-contend {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .left {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+
+            @include md {
+                // Giao diện mobile khi thu phóng
+                display: flex;
+            }
+
+            li :link {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                &:hover {
+                    // border-bottom: 1px solid white;
+                    background: -webkit-linear-gradient(120deg, hsl(19, 90%, 52%), hsl(56, 100%, 50%));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        .center {
+            font-size: 22px;
+            font-weight: 700;
+            display: flex;
+            cursor: grab;
+
+            @include md {
+                font-size: 34px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            p {
+                transition: 0.4s;
+                transform: translateX(0);
+                cursor: grab;
+                color: #fff;
+            }
+
+            p:hover {
+                transform: translateY(-1rem);
+                background: -webkit-linear-gradient(120deg, hsl(19, 90%, 52%), hsl(56, 100%, 50%));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            &:hover {
+                border-bottom: white;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-content: center;
+            gap: 20px;
+
+            @include md {
+                gap: 25px;
+            }
+
+            svg {
+                font-size: 20px;
+                cursor: pointer;
+
+                @include md {
+                    font-size: 24px;
+                }
+
+                &:hover {
+                    border-bottom: 1px solid white;
+                }
+            }
+
+            .cart-icon {
+                position: relative;
+
+                span {
+                    min-height: 14px;
+                    text-align: center;
+                    background-color: white;
+                    color: red;
+                    font-size: 14px;
+                    padding: 1.5px;
+                    position: absolute;
+                    top: -6px;
+                    right: -6px;
+                    line-height: 1;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+
+    &.sticky-header {
+        // Add thêm class khi scrollY phần Header
+        position: sticky;
+        top: 0;
+        animation: stickyHeader 0.5s ease forwards;
+    }
+}
+
+@keyframes stickyHeader {
+    0% {
+        transform: translateY(-80px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
