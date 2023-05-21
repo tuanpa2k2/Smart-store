@@ -27,7 +27,7 @@ function Button({
     }
 
     return (
-        <Comp className="wrapper" {...props}>
+        <Comp className="wrapper-btn" {...props}>
             {leftIcon && <span className="icon-button">{leftIcon}</span>}
             <span className="title-button">{children}</span>
             {rightIcon && <span className="icon-button">{rightIcon}</span>}

@@ -1,15 +1,36 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Tippy from '@tippyjs/react/headless';
 
 import { TbSearch } from 'react-icons/tb';
 import { CgShoppingCart, CgLogIn } from 'react-icons/cg';
 import { CiMenuKebab } from 'react-icons/ci';
+import { GrLanguage } from 'react-icons/gr';
+import { VscFeedback } from 'react-icons/vsc';
+import { BsKeyboard } from 'react-icons/bs';
 
 import Button from '../Button/Button';
 
 import './Header.scss';
+import Menu from '../Popper/Menu';
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+
+    const MENU_ITEMS = [
+        {
+            icon: <GrLanguage />,
+            title: 'English',
+        },
+        {
+            icon: <VscFeedback />,
+            title: 'Feedback and help',
+            to: '/feedback',
+        },
+        {
+            icon: <BsKeyboard />,
+            title: 'Keyboard shortcuts',
+        },
+    ];
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -59,10 +80,10 @@ const Header = () => {
                     </div>
                     <div className="right">
                         <TbSearch />
-                        {/* <span className="cart-icon">
+                        <span className="cart-icon">
                             <CgShoppingCart />
                             <span>5</span>
-                        </span> */}
+                        </span>
                         <Button
                             primary
                             rightIcon={<CgLogIn />}
@@ -72,7 +93,13 @@ const Header = () => {
                         >
                             Login
                         </Button>
-                        <CiMenuKebab style={{ marginLeft: -20 }} />
+
+                        <Menu items={MENU_ITEMS}>
+                            <span className="more-btn">
+                                {/* nhận children của component Menu */}
+                                <CiMenuKebab style={{ marginLeft: -20 }} />
+                            </span>
+                        </Menu>
                     </div>
                 </div>
             </header>

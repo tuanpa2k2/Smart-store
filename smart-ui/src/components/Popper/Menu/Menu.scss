@@ -1,0 +1,31 @@
+@import '../../../css-config/mixins.scss';
+
+.menu-popper {
+    width: 234px;
+
+    .wrapper-menuItem {
+        display: flex;
+        width: 100%;
+        padding: 6px 8px;
+        color: black;
+        align-items: center;
+        background-color: transparent;
+
+        .icon-button {
+            margin-right: 10px;
+        }
+
+        .title-button {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        &:hover {
+            background-color: rgb(22, 24, 35, 0.16);
+        }
+    }
+}
+
+.menu-popperWrapper {
+    padding: 6px 0px;
+}
