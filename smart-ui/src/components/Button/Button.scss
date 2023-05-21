@@ -1,0 +1,32 @@
+@import '../../css-config/mixins.scss';
+
+.wrapper {
+    display: inline-flex; // làm cho nút không bị rụng xuônga hàng
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    min-width: 100px;
+    padding: 0px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    + .wrapper {
+        margin-left: -16px; // khoảng cách giữa các button
+    }
+
+    .icon-button + .title-button,
+    .title-button + .icon-button {
+        margin-left: 6px;
+        margin-top: 6px;
+
+        &:hover {
+            border-bottom: none;
+        }
+    }
+
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+        color: white;
+    }
+}

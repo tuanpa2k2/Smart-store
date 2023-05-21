@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { TbSearch, TbRegistered } from 'react-icons/tb';
-import { CgShoppingCart } from 'react-icons/cg';
+import { TbSearch } from 'react-icons/tb';
+import { CgShoppingCart, CgLogIn } from 'react-icons/cg';
+import { CiMenuKebab } from 'react-icons/ci';
+
+import Button from '../Button/Button';
 
 import './Header.scss';
 const Header = () => {
@@ -22,7 +25,7 @@ const Header = () => {
     return (
         <>
             <header className={`main-header ${scrolled ? 'sticky-header' : ''}`}>
-                {/* scroll quá 200 thì add thêm class "sticky-header" ngược lại thì ko */}
+                {/* scroll quá 100 thì add thêm class "sticky-header" ngược lại thì ko */}
                 <div className="header-contend">
                     <ul className="left">
                         <li>
@@ -56,11 +59,20 @@ const Header = () => {
                     </div>
                     <div className="right">
                         <TbSearch />
-                        <span className="cart-icon">
+                        {/* <span className="cart-icon">
                             <CgShoppingCart />
                             <span>5</span>
-                        </span>
-                        <TbRegistered />
+                        </span> */}
+                        <Button
+                            primary
+                            rightIcon={<CgLogIn />}
+                            // to="/login" // nhận link nội bộ của react-router-dom
+                            // href="https://www.facebook.com/TuanPA.2002/" // prop href: nhận link ngoài
+                            // target="_blank" // khi click nó sẽ chuyển hướng sang tab mới với cái link đó
+                        >
+                            Login
+                        </Button>
+                        <CiMenuKebab style={{ marginLeft: -20 }} />
                     </div>
                 </div>
             </header>

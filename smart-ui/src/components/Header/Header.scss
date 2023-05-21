@@ -32,7 +32,7 @@
             }
 
             li :link {
-                text-decoration: none;
+                // text-decoration: none;
                 font-size: 16px;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -81,7 +81,7 @@
 
         .right {
             display: flex;
-            align-content: center;
+            align-items: center;
             gap: 20px;
 
             @include md {
@@ -103,6 +103,7 @@
 
             .cart-icon {
                 position: relative;
+                display: flex;
 
                 span {
                     min-height: 14px;
