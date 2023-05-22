@@ -1,5 +1,5 @@
 import { MdClose } from 'react-icons/md';
-// import { BsCartX } from "react-icons/bs";
+// import { BsCartX } from 'react-icons/bs';
 
 import CartItem from './CartItem/CartItem';
 
@@ -11,9 +11,10 @@ const Cart = ({ setShowCart }) => {
             <div className="cart-content">
                 <div className="cart-header">
                     <span className="heading">Shopping Cart</span>
+                    {/* nhận prop setShowCart để nhận handle onclick btn-close */}
                     <span className="close-btn" onClick={() => setShowCart(false)}>
-                        <MdClose />
                         <span className="text">Close</span>
+                        <MdClose />
                     </span>
                 </div>
 

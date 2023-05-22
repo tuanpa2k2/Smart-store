@@ -18,6 +18,7 @@ function Menu({ children, items = [] }) {
             render={(attrs) => (
                 <div className="menu-popper" tabIndex="-1" {...attrs}>
                     <PopperWrapper className="menu-popperWrapper">{renderItems()}</PopperWrapper>
+                    {/* cho phép add thêm className="menu-popperWrapper" vì đã có nhận prop children "className" ở component "Wrapper" */}
                 </div>
             )}
         >

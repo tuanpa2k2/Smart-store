@@ -3,9 +3,11 @@ import './Menu.scss';
 
 function MenuItem({ data }) {
     return (
-        <Button className="wrapper-menuItem" leftIcon={data.icon} to={data.to}>
-            {data.title}
-        </Button>
+        <>
+            <Button className="wrapper-menuItem" leftIcon={data.icon} to={data.to} href={data.href}>
+                {data.title}
+            </Button>
+        </>
     );
 }
 

@@ -1,9 +1,10 @@
-import './Product.scss';
 import prod from '../../../assets/products/earbuds-prod-2.webp';
 // import { LazyLoadImage } from "react-lazy-load-image-component";
 
 // import { useEffect, useState } from "react";
 // import axios from 'axios';
+
+import './Product.scss';
 
 const Product = () => {
     // const [image, setImage] = useState();

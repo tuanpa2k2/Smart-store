@@ -1,34 +1,43 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Tippy from '@tippyjs/react/headless';
+// import Tippy from '@tippyjs/react/headless';
 
 import { TbSearch } from 'react-icons/tb';
-import { CgShoppingCart, CgLogIn } from 'react-icons/cg';
+import { CgShoppingCart } from 'react-icons/cg';
 import { CiMenuKebab } from 'react-icons/ci';
-import { GrLanguage } from 'react-icons/gr';
+import { MdLanguage } from 'react-icons/md';
 import { VscFeedback } from 'react-icons/vsc';
 import { BsKeyboard } from 'react-icons/bs';
+import { FcKey } from 'react-icons/fc';
 
-import Button from '../Button/Button';
+// import Button from '../Button/Button';
 
-import './Header.scss';
 import Menu from '../Popper/Menu';
+import Cart from '../Cart/Cart';
+import './Header.scss';
+
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [showCart, setShowCart] = useState(false);
 
     const MENU_ITEMS = [
         {
-            icon: <GrLanguage />,
+            icon: <MdLanguage />,
             title: 'English',
         },
         {
             icon: <VscFeedback />,
             title: 'Feedback and help',
-            to: '/feedback',
+            to: '/feedback', // nhận link nội bộ của react
         },
         {
             icon: <BsKeyboard />,
             title: 'Keyboard shortcuts',
+        },
+        {
+            icon: <FcKey />,
+            title: 'Sign in',
+            href: 'https://facebook.com/tuanpa2002', // nhận link bên ngoài
         },
     ];
 
@@ -80,11 +89,11 @@ const Header = () => {
                     </div>
                     <div className="right">
                         <TbSearch />
-                        <span className="cart-icon">
+                        <span className="cart-icon" onClick={() => setShowCart(true)}>
                             <CgShoppingCart />
                             <span>5</span>
                         </span>
-                        <Button
+                        {/* <Button
                             primary
                             rightIcon={<CgLogIn />}
                             // to="/login" // nhận link nội bộ của react-router-dom
@@ -92,17 +101,20 @@ const Header = () => {
                             // target="_blank" // khi click nó sẽ chuyển hướng sang tab mới với cái link đó
                         >
                             Login
-                        </Button>
+                        </Button> */}
 
                         <Menu items={MENU_ITEMS}>
                             <span className="more-btn">
                                 {/* nhận children của component Menu */}
-                                <CiMenuKebab style={{ marginLeft: -20 }} />
+                                <CiMenuKebab />
                             </span>
                         </Menu>
                     </div>
                 </div>
             </header>
+
+            {/* truyền prop "setShowCart" trong component Cart để handle btn-close */}
+            {showCart && <Cart setShowCart={setShowCart} />}
         </>
     );
 };
