@@ -39,7 +39,8 @@ const Header = () => {
         {
             icon: <FcKey />,
             title: 'Sign in',
-            href: 'https://facebook.com/tuanpa2002', // nhận link bên ngoài
+            // href: 'https://facebook.com/tuanpa2002', // nhận link bên ngoài
+            to: './login',
         },
     ];
 

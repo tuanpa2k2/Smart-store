@@ -8,6 +8,7 @@ import Error from './components/Error/Error';
 import SingleProduct from './components/SingleProduct/SingleProduct';
 import Newsletter from './components/Footer/Newsletter/Newsletter';
 import AppContext from './utils/context';
+import Login from './components/Authen/Login';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route exact path="/" element={<Home />} />
                     <Route path="/category" element={<Category />} />
                     <Route path="/product" element={<SingleProduct />} />
+                    <Route path="/login" element={<Login />} />
                     <Route path="/:somestring" element={<Error />} />
                 </Routes>
                 <Newsletter />
