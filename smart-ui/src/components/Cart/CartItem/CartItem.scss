@@ -70,21 +70,18 @@
                     &:nth-child(1) {
                         font-size: 18px;
                         border-right: 1px solid rgba(0, 0, 0, 0.2);
-
-                        &:hover {
-                            background-color: #dfff00;
-                        }
                     }
                     &:nth-child(2) {
                         width: 40px;
+                        pointer-events: none; //bỏ event
                     }
                     &:nth-child(3) {
                         font-size: 18px;
                         border-left: 1px solid rgba(0, 0, 0, 0.2);
+                    }
 
-                        &:hover {
-                            background-color: #dfff00;
-                        }
+                    &:hover {
+                        background-color: #6b6b6b;
                     }
                 }
             }

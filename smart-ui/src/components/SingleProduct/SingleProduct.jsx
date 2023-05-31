@@ -14,8 +14,18 @@ const SingleProduct = () => {
                     </div>
                     <div className="right">
                         <span className="name">Product Name</span>
-                        <span className="price">Price</span>
-                        <span className="desc">Description</span>
+                        <span className="text-price">
+                            Price:
+                            <span className="price">$8000</span>
+                        </span>
+                        <span className="desc">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia aliquid nobis nulla
+                            exercitationem incidunt perspiciatis minus. Consequuntur minima, labore assumenda eius,
+                            natus atque id quidem, ut ipsa repudiandae quas. Sint. orem ipsum dolor, sit amet
+                            consectetur adipisicing elit. Quia aliquid nobis nulla exercitationem incidunt perspiciatis
+                            minus. Consequuntur minima, labore assumenda eius, natus atque id quidem, ut ipsa
+                            repudiandae quas. Sint.
+                        </span>
 
                         <div className="cart-buttons">
                             <div className="quantity-buttons">

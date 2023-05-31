@@ -1,6 +1,7 @@
-import './Banner.scss';
 import BannerImg from '../../../assets/banner-img.png';
+import Button from '../../Button/Button';
 
+import './Banner.scss';
 const Banner = () => {
     return (
         <div className="hero-banner">
@@ -9,8 +10,12 @@ const Banner = () => {
                     <h1>SALES</h1>
                     <p>SÁNG MAI TÔI SẼ VỀ QUÊ LÚC 5H</p>
                     <div className="ctas">
-                        <div className="banner-cta">Read more</div>
-                        <div className="banner-cta v2">Read more</div>
+                        <Button className="banner-cta" href="https://facebook.com/tuanpa2002" target="_blank">
+                            Read more
+                        </Button>
+                        <Button className="banner-cta v2" to="./link-test">
+                            Link nội bộ
+                        </Button>
                     </div>
                 </div>
                 <img className="banner-img" src={BannerImg} alt="" />

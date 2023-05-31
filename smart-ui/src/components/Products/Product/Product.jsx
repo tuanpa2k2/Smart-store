@@ -34,8 +34,13 @@ const Product = () => {
 
                 <div className="prod-details">
                     <span className="name">Product Name</span>
-                    <span className="price">$666</span>
+                    <span className="text-price">
+                        Price:
+                        <span className="price">$8000</span>
+                    </span>
                 </div>
+
+                <div className="btn-add-cart">Add to cart</div>
             </div>
         </>
     );

@@ -1,5 +1,5 @@
 import { MdClose } from 'react-icons/md';
-// import { BsCartX } from 'react-icons/bs';
+// import { BsCartX } from 'react-icons/bs'; // Empty cart
 
 import CartItem from './CartItem/CartItem';
 

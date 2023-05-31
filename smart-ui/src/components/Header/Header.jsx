@@ -14,11 +14,13 @@ import { FcKey } from 'react-icons/fc';
 
 import Menu from '../Popper/Menu';
 import Cart from '../Cart/Cart';
+import Search from './Search/Search';
 import './Header.scss';
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [showCart, setShowCart] = useState(false);
+    const [showSearch, setShowSearch] = useState(false);
 
     const MENU_ITEMS = [
         {
@@ -88,7 +90,7 @@ const Header = () => {
                         <p>E</p>
                     </div>
                     <div className="right">
-                        <TbSearch />
+                        <TbSearch onClick={() => setShowSearch(true)} />
                         <span className="cart-icon" onClick={() => setShowCart(true)}>
                             <CgShoppingCart />
                             <span>5</span>
@@ -115,6 +117,7 @@ const Header = () => {
 
             {/* truyền prop "setShowCart" trong component Cart để handle btn-close */}
             {showCart && <Cart setShowCart={setShowCart} />}
+            {showSearch && <Search setShowSearch={setShowSearch} />}
         </>
     );
 };
