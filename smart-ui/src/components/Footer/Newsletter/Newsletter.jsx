@@ -7,12 +7,12 @@ const Newsletter = () => {
     return (
         <div className="newsletter-section">
             <div className="newsletter-content">
-                <span className="big-text">hãy luôn vui vẻ vì cuộc sống còn nhiều điều thú vị hơn </span>
+                <span className="big-text">hãy theo dõi chúng tôi để cập nhập nhiều sảng phẩm mới nhất </span>
                 <div className="form">
                     <input type="text" placeholder="Email address" />
                     <button>Send mail</button>
                 </div>
-                <div className="text">Will be any more...</div>
+                <div className="text">Will be any more</div>
                 <div className="social-icons">
                     <div className="icon">
                         <FaFacebookF size={14} />

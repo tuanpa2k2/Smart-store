@@ -1,12 +1,11 @@
 import { AiOutlineMail } from 'react-icons/ai';
 import { BiLockAlt } from 'react-icons/bi';
 
-import './Login.scss';
+import { Link } from 'react-router-dom';
+import './Authen.scss';
 
-function Login({ setShowLogin }) {
+function Login() {
     return (
-        // <div className="abcdef">
-        // </div>
         <section>
             <div className="login-box">
                 <form action="">
@@ -31,12 +30,17 @@ function Login({ setShowLogin }) {
                             <input type="checkbox" />
                             Remember me
                         </label>
-                        <a href="#">For got password</a>
+                        <Link className="link" to="/forgot-password">
+                            Forgot Password
+                        </Link>
                     </div>
                     <button>Login</button>
                     <div className="register-link">
                         <p>
-                            Don't have an account?<a href="#">Register now</a>
+                            Don't you have an account?
+                            <Link className="link" to="/register">
+                                Register Now
+                            </Link>
                         </p>
                     </div>
                 </form>

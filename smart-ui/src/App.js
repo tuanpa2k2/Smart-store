@@ -9,6 +9,8 @@ import SingleProduct from './components/SingleProduct/SingleProduct';
 import Newsletter from './components/Footer/Newsletter/Newsletter';
 import AppContext from './utils/context';
 import Login from './components/Authen/Login';
+import Register from './components/Authen/Register';
+import ForgotPassword from './components/Authen/ForgotPassword';
 
 function App() {
     return (
@@ -20,6 +22,8 @@ function App() {
                     <Route path="/category" element={<Category />} />
                     <Route path="/product" element={<SingleProduct />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/:somestring" element={<Error />} />
                 </Routes>
                 <Newsletter />

@@ -8,7 +8,7 @@ const Banner = () => {
             <div className="content">
                 <div className="text-content">
                     <h1>SALES</h1>
-                    <p>SÁNG MAI TÔI SẼ VỀ QUÊ LÚC 5H</p>
+                    <p>Đừng bỏ lõ cơ hội này nhé 🧐</p>
                     <div className="ctas">
                         <Button className="banner-cta" href="https://facebook.com/tuanpa2002" target="_blank">
                             Read more

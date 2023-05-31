@@ -4,7 +4,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 92vh;
     width: 100%;
     height: 92vh;
     background: url('../../assets/color.jpg') no-repeat;
@@ -15,7 +14,8 @@ section {
     .login-box {
         position: relative;
         width: 400px;
-        height: 450px;
+        min-height: 30vh;
+        padding: 10px 0;
         border: 2px solid rgba(255, 255, 255, 0.5);
         background-color: transparent;
         backdrop-filter: blur(15px); //làm mờ phông background
@@ -28,12 +28,17 @@ section {
             font-size: 2rem;
             color: #fff;
             text-align: center;
+            padding: 10px 0;
+        }
+
+        span {
+            color: #fff;
         }
 
         .input-box {
             position: relative;
             width: 310px;
-            margin: 30px 0;
+            margin: 25px 0;
             border-bottom: 2px solid #fff;
 
             label {
@@ -106,6 +111,11 @@ section {
             font-size: 1.2rem;
             color: #000;
             font-weight: 500;
+
+            &:hover {
+                background-color: red;
+                color: #fff;
+            }
         }
 
         .register-link {
@@ -115,7 +125,7 @@ section {
             margin: 20px 0 10px;
 
             p {
-                a {
+                .link {
                     color: #fff;
                     text-decoration: none;
                     font-weight: 500;
