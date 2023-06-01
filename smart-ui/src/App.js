@@ -19,8 +19,8 @@ function App() {
                 <Header />
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route path="/category" element={<Category />} />
-                    <Route path="/product" element={<SingleProduct />} />
+                    <Route path="/category/:id" element={<Category />} />
+                    <Route path="/product/:id" element={<SingleProduct />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
                     <Route path="/forgot-password" element={<ForgotPassword />} />

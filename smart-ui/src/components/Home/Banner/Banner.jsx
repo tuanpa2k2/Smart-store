@@ -1,4 +1,4 @@
-import BannerImg from '../../../assets/banner-img.png';
+// import BannerImg from '../../../assets/banner-img.png';
 import Button from '../../Button/Button';
 
 import './Banner.scss';
@@ -18,7 +18,7 @@ const Banner = () => {
                         </Button>
                     </div>
                 </div>
-                <img className="banner-img" src={BannerImg} alt="" />
+                {/* <img className="banner-img" src={BannerImg} alt="" /> */}
             </div>
         </div>
     );
