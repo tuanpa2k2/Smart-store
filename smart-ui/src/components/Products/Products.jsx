@@ -1,5 +1,5 @@
-import './Products.scss';
 import Product from './Product/Product';
+import './Products.scss';
 
 const Products = ({ products, innerPage, headingText }) => {
     return (

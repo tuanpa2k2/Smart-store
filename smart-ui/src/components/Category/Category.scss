@@ -15,8 +15,13 @@
 
         .category-title {
             font-size: 24px;
+            display: flex;
             @include md {
                 font-size: 34px;
+            }
+
+            p {
+                padding-left: 6px;
             }
         }
     }

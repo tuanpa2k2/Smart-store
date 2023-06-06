@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // import Tippy from '@tippyjs/react/headless';
 
@@ -21,6 +22,7 @@ const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [showCart, setShowCart] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const navigate = useNavigate();
 
     const MENU_ITEMS = [
         {
@@ -67,17 +69,17 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/category/1" style={{ color: 'white' }}>
-                                Categories
+                            <Link to="/about" style={{ color: 'white' }}>
+                                about
                             </Link>
                         </li>
                         <li>
-                            <Link to="/product/1" style={{ color: 'white' }}>
-                                Product
+                            <Link to="/contact" style={{ color: 'white' }}>
+                                contact
                             </Link>
                         </li>
                     </ul>
-                    <div className="center">
+                    <div className="center" onClick={() => navigate('/')}>
                         <p>S</p>
                         <p>M</p>
                         <p>A</p>
