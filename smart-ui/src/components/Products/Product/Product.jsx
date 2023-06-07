@@ -1,11 +1,20 @@
-import prod from '../../../assets/products/earbuds-prod-2.webp';
+import { useNavigate } from 'react-router-dom';
 
 import './Product.scss';
 
 const Product = ({ id, data }) => {
+    const navigate = useNavigate();
+
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <>
-            <div className="product-card">
+            <div className="product-card" onClick={() => navigate('/product/' + id) || scrollUp()}>
                 <div className="thumbnail">
                     <img src={process.env.REACT_APP_DEV_URL + data.img.data[0].attributes.url} alt="" />
                 </div>

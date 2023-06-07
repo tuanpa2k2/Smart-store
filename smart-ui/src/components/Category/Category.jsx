@@ -4,7 +4,7 @@ import useFetch from '../../hooks/useFetch';
 
 import './Category.scss';
 const Category = () => {
-    const { id } = useParams();
+    const { id } = useParams(); // prop '{id}' là phải khớp với cái router ("<Route path="/product/:id" element={<SingleProduct />} />") ở file App.js
     const { data } = useFetch(`/api/products?populate=*&[filters][categories][id]=${id}`);
 
     return (
