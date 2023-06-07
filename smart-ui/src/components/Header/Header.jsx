@@ -52,6 +52,12 @@ const Header = () => {
             setScrolled(true);
         } else setScrolled(false);
     };
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -64,7 +70,7 @@ const Header = () => {
                 <div className="header-contend">
                     <ul className="left">
                         <li>
-                            <Link to="/" style={{ color: 'white' }}>
+                            <Link onClick={scrollUp} to="/" style={{ color: 'white' }}>
                                 Home
                             </Link>
                         </li>
