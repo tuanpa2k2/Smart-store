@@ -1,9 +1,9 @@
 import React from 'react';
-import './Footer.scss';
 
 import { FaLocationArrow, FaMobileAlt, FaEnvelope } from 'react-icons/fa';
 import Payment from '../../assets/payments.png';
 
+import './Footer.scss';
 const Footer = () => {
     return (
         <footer className="footer">
@@ -54,7 +54,7 @@ const Footer = () => {
             </div>
             <div className="bottom-bar">
                 <div className="bottom-bar-content">
-                    <div className="text">được tạo bởi TuanPA - Mẫu thiết kế mới nhất.</div>
+                    <div className="text">created by TuanPA - Latest Design Template.</div>
                     <img src={Payment} alt="" />
                 </div>
             </div>
