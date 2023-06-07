@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
-import RelatedProducts from './RelatedProducts/RelatedProducts';
+import { useParams } from 'react-router-dom';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaCartPlus } from 'react-icons/fa';
 
 import useFetch from '../../hooks/useFetch';
-import { useParams } from 'react-router-dom';
+import { Context } from '../../utils/context';
+import RelatedProducts from './RelatedProducts/RelatedProducts';
 import './SingleProduct.scss';
 
 const SingleProduct = () => {
     const [quantity, setQuantity] = useState(1);
     const { id } = useParams();
     const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
+
+    const { handleAddToCart } = useContext(Context);
 
     const decrement = () => {
         setQuantity((prev) => {
@@ -48,7 +51,13 @@ const SingleProduct = () => {
                                 <span>{quantity}</span>
                                 <span onClick={increment}>+</span>
                             </div>
-                            <button className="add-to-card-button">
+                            <button
+                                className="add-to-card-button"
+                                onClick={() => {
+                                    handleAddToCart(data.data[0], quantity);
+                                    setQuantity(1);
+                                }}
+                            >
                                 <FaCartPlus size={20} />
                                 <p>ADD TO CART</p>
                             </button>

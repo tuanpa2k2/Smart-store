@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // import Tippy from '@tippyjs/react/headless';
@@ -13,6 +13,7 @@ import { FcKey } from 'react-icons/fc';
 
 // import Button from '../Button/Button';
 
+import { Context } from '../../utils/context';
 import Menu from '../Popper/Menu';
 import Cart from '../Cart/Cart';
 import Search from './Search/Search';
@@ -22,6 +23,7 @@ const Header = () => {
     const [scrolled, setScrolled] = useState(false);
     const [showCart, setShowCart] = useState(false);
     const [showSearch, setShowSearch] = useState(false);
+    const { cartCount } = useContext(Context);
     const navigate = useNavigate();
 
     const MENU_ITEMS = [
@@ -102,7 +104,7 @@ const Header = () => {
                         <TbSearch onClick={() => setShowSearch(true)} />
                         <span className="cart-icon" onClick={() => setShowCart(true)}>
                             <CgShoppingCart />
-                            <span>5</span>
+                            {!!cartCount && <span>{cartCount}</span>}
                         </span>
                         {/* <Button
                             primary
