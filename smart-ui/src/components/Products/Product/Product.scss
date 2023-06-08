@@ -51,7 +51,7 @@
             span {
                 font-size: 18px;
                 margin-left: 5px;
-                color: red;
+                color: rgb(0, 21, 255);
             }
         }
     }
@@ -63,11 +63,11 @@
         text-transform: uppercase;
         padding: 8px 0;
         border-top: 1px solid black;
-        color: red;
+        color: rgb(38, 0, 255);
 
         &:hover {
-            background-color: red;
-            color: white;
+            background-color: rgb(11 141 233);
+            color: rgb(255, 255, 255);
         }
     }
 }

@@ -5,8 +5,8 @@
     width: 100%;
     height: 100%;
     z-index: 999;
-    // top: 0;
-    // left: 0;
+    top: 0;
+    left: 0;
     background-color: transparent;
     background: url('../../../assets/img1.jpg') no-repeat;
     background-position: center;
@@ -77,9 +77,6 @@
         .serach-results {
             height: calc(100vh - 110px);
             overflow: auto;
-            @include md {
-                height: calc(100vh - 160px);
-            }
 
             .search-result-item {
                 display: flex;

@@ -23,3 +23,11 @@ body {
         text-decoration: none;
     }
 }
+
+html *::-webkit-scrollbar {
+    width: 8px;
+}
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(22, 24, 35, 0.363);
+}

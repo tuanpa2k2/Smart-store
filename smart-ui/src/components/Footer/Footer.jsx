@@ -31,12 +31,12 @@ const Footer = () => {
                     </div>
                     <div className="c-item">
                         <FaEnvelope />
-                        <div className="text">Email: phianhtuan31@gmail.com</div>
+                        <div className="text">Email: tuanpa2k2@gmail.com</div>
                     </div>
                 </div>
                 <div className="col">
                     <div className="title">Categories</div>
-                    <span className="text">Sách tiếng anh</span>
+                    <span className="text">Books English</span>
                     <span className="text">Máy tính</span>
                     <span className="text">Đồ dùng học tập</span>
                     <span className="text">Điện thoại</span>
